@@ -8,19 +8,20 @@ public class Space : MonoBehaviour
 
     [SerializeField] ParticleSystem particles;
     [SerializeField] ParticleSystem invalid;
+    [SerializeField] SpaceType spaceType = SpaceType.DockSpace;
 
-    Occupant occupant;
+    [SerializeField] Occupant occupant;
     bool invalidPlacement = false;
 
     [SerializeField] TextMeshPro text;
     public void Activate()
     {
-        particles.Play();
+        if (particles) particles.Play();
     }
 
     public void Deactivate()
     {
-        particles.Stop();
+        if (particles) particles.Stop();
 
     }
 
@@ -33,7 +34,7 @@ public class Space : MonoBehaviour
                 OnTriggerExit(occupant.GetComponentInChildren<Collider>());
             } else
             {
-                text.text = occupant.name;
+                if (text) text.text = occupant.name;
             }
 
 
@@ -61,7 +62,6 @@ public class Space : MonoBehaviour
             occupant = tempOccupant;
         }
 
-
         if (occupant != tempOccupant && occupant) // New entry.
         {
             Debug.Log("Second occupant.");
@@ -78,7 +78,7 @@ public class Space : MonoBehaviour
 
         if (!occupant && tempOccupant.IsPlacing())
         {
-            Debug.Log("Waiting for placement.");
+            //Debug.Log("Waiting for placement.");
         } else if (!occupant && !tempOccupant.IsPlacing()) 
         {
             occupant = tempOccupant;
@@ -100,6 +100,11 @@ public class Space : MonoBehaviour
     public bool IsPlacementValid()
     {
         return !invalidPlacement;
+    }
+
+    public SpaceType GetSpaceType()
+    {
+        return spaceType;
     }
 
 }

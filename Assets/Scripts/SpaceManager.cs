@@ -3,11 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum SpaceType { 
+    DockSpace,
+    BoatSpace
+}
+
+
+
 public class SpaceManager : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
     [SerializeField] Camera mainCamera;
     [SerializeField] Vector3 offsetVector;
+    [SerializeField] Transform dockParent;
+    [SerializeField] Transform boatParent;
+    [SerializeField] Transform placementParent;
+    [SerializeField] TriggeredEvent refreshBoatEvent;
+
 
     Space[] spaces;
 
@@ -78,6 +90,7 @@ public class SpaceManager : MonoBehaviour
                     {
                         placementPiece = o;
                         o.Placement();
+                        o.transform.parent = placementParent;
                     }
                 }
                 else if (!o) // If there is a placement piece, place it.
@@ -97,11 +110,20 @@ public class SpaceManager : MonoBehaviour
 
                     if (validPlacement)
                     {
+                        if (activeSpace.GetSpaceType() == SpaceType.BoatSpace)
+                        {
+                            placementPiece.transform.parent = boatParent;
+                        }
+                        else
+                        {
+                            placementPiece.transform.parent = dockParent;
+                        }
                         placementPiece.PlacementComplete();
                         placementPiece = null;
 
+                        refreshBoatEvent.Trigger();
                     }
-                    else
+                        else
                     {
                         Debug.Log("Placement invalid.");
                     }
