@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4509953567487203980}
   - component: {fileID: 6572936015191440170}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 9.9, y: 9.9, z: 9.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6572936015191440170
 MonoBehaviour:
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 917803321959112766}
   invalid: {fileID: 5747161729502318898}
+  spaceType: 0
   occupant: {fileID: 0}
   text: {fileID: 7943985774263596073}
 --- !u!1 &1877269231402827827

@@ -19,7 +19,8 @@ public class SpaceManager : MonoBehaviour
     [SerializeField] Transform boatParent;
     [SerializeField] Transform placementParent;
     [SerializeField] TriggeredEvent refreshBoatEvent;
-
+    [SerializeField] TriggeredEvent pickupEvent;
+    [SerializeField] TriggeredEvent placementEvent;
 
     Space[] spaces;
 
@@ -65,7 +66,12 @@ public class SpaceManager : MonoBehaviour
 
         if (Physics.Raycast(ray: ray, hitInfo: out RaycastHit hit, 100f, layerMask) && hit.collider)
         {
-            return hit.collider.gameObject.GetComponent<Space>();
+            Space hitSpace = hit.collider.gameObject.GetComponent<Space>();
+            if (hitSpace)
+            {
+                if (hitSpace.canBePickedUp) return hitSpace;
+            }
+            return null;
         } else
         {
             return null;
@@ -86,11 +92,11 @@ public class SpaceManager : MonoBehaviour
                 {
                     Debug.Log("No placement piece.");
 
-                    if (o)
+                    if (o && activeSpace.canBePickedUp)
                     {
                         placementPiece = o;
                         o.Placement();
-                        o.transform.parent = placementParent;
+                        pickupEvent.Trigger();
                     }
                 }
                 else if (!o) // If there is a placement piece, place it.
@@ -110,6 +116,7 @@ public class SpaceManager : MonoBehaviour
 
                     if (validPlacement)
                     {
+                        placementEvent.Trigger();
                         if (activeSpace.GetSpaceType() == SpaceType.BoatSpace)
                         {
                             placementPiece.transform.parent = boatParent;
@@ -130,10 +137,6 @@ public class SpaceManager : MonoBehaviour
 
                     
                 }
-            }
-            if (activeSpace && !placementPiece)
-            {
-
             }
         }
 

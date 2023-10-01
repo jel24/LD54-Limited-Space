@@ -94,7 +94,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6458908503492852179, guid: 679bf28549c33ef41b92b20402deda47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.95
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458908503492852179, guid: 679bf28549c33ef41b92b20402deda47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458908503492852179, guid: 679bf28549c33ef41b92b20402deda47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6666892874478535063, guid: 679bf28549c33ef41b92b20402deda47, type: 3}
       propertyPath: m_SelectedEdges.Array.size
