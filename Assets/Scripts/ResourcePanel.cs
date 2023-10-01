@@ -32,4 +32,10 @@ public class ResourcePanel : MonoBehaviour
         SceneManager.LoadSceneAsync(victoryLevel);
     }
 
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
