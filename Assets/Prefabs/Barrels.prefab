@@ -181,9 +181,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placementParticles: {fileID: 2384323731801056536}
-  resource: 0
-  statBonus: 20
-  label: {fileID: 0}
 --- !u!1 &8683875388181547278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1729,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2

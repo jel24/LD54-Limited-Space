@@ -21,6 +21,7 @@ public class SpaceManager : MonoBehaviour
     [SerializeField] TriggeredEvent refreshBoatEvent;
     [SerializeField] TriggeredEvent pickupEvent;
     [SerializeField] TriggeredEvent placementEvent;
+    [SerializeField] TriggeredEvent invalidEvent;
 
     Space[] spaces;
 
@@ -82,15 +83,15 @@ public class SpaceManager : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Clicked!");
+            //Debug.Log("Clicked!");
             if (activeSpace)
             {
-                Debug.Log("Active space found.");
+                //Debug.Log("Active space found.");
 
                 Occupant o = activeSpace.GetOccupant();
                 if (!placementPiece) // If there is no placement piece, check to see if there's something to pick up.
                 {
-                    Debug.Log("No placement piece.");
+                    //Debug.Log("No placement piece.");
 
                     if (o && activeSpace.canBePickedUp)
                     {
@@ -109,7 +110,7 @@ public class SpaceManager : MonoBehaviour
                     {
                         if (!s.IsPlacementValid())
                         {
-                            Debug.Log(s.name + " is not a valid placement space.");
+                            //Debug.Log(s.name + " is not a valid placement space.");
                             validPlacement = false;
                         }
                     }
@@ -130,9 +131,9 @@ public class SpaceManager : MonoBehaviour
 
                         refreshBoatEvent.Trigger();
                     }
-                        else
+                    else
                     {
-                        Debug.Log("Placement invalid.");
+                        invalidEvent.Trigger();
                     }
 
                     
