@@ -99,7 +99,7 @@ public class SpaceManager : MonoBehaviour
                         pickupEvent.Trigger();
                     }
                 }
-                else if (!o) // If there is a placement piece, place it.
+                else // If there is a placement piece, place it.
                 {
                     Debug.Log("Placement piece.");
 
@@ -136,7 +136,7 @@ public class SpaceManager : MonoBehaviour
                     }
 
                     
-                }
+                }  
             }
         }
 

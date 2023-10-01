@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811989773170679348}
   - component: {fileID: 184051774879277231}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8750834039992793457}
   - component: {fileID: 402792034479760982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4256860018515681511}
   - component: {fileID: 2439481824242279782}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3598781235694028450}
   - component: {fileID: 8414977076695013020}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3011116452933529476}
   - component: {fileID: 5791347921177731708}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,8 +432,7 @@ GameObject:
   - component: {fileID: 7631749643929231970}
   - component: {fileID: 4953007045979726702}
   - component: {fileID: 4091290231483609657}
-  - component: {fileID: 5411173359203376934}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fish Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1697,28 +1696,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2850314677979347227}
   m_Mesh: {fileID: 0}
---- !u!64 &5411173359203376934
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2850314677979347227}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3825496888673478929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6934254533236296375}
   - component: {fileID: 3097931185283496616}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1813,7 +1790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7221441277589592827}
   - component: {fileID: 7661913165320352983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1897,7 +1874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6099197240820392164}
   - component: {fileID: 5508429703350268560}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,7 +1958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8557567062843989623}
   - component: {fileID: 1999097558065460767}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2065,7 +2042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3043771967477583167}
   - component: {fileID: 8420453272647353297}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2149,7 +2126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2912573025697615714}
   - component: {fileID: 970516404103323980}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icon_fish (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
